@@ -8,10 +8,10 @@ class JsonWebToken
 
   def self.decode(token)
     begin
-      decoded_token = JWT.decode(token, SECRET_KEY)[0]
+      @decoded_token = JWT.decode(token, SECRET_KEY)[0]
+      HashWithIndifferentAccess.new @decoded_token
     rescue Exception => e
       return e.full_message
     end
-    HashWithIndifferentAccess.new decoded_token
   end
 end
