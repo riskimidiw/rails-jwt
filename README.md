@@ -1,24 +1,38 @@
-# README
+# rails-jwt
+Simple Rails API + JWT authentication
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Tutorial
 
-Things you may want to cover:
+https://medium.com/@riskimidiw/rails-api-jwt-authentication-a04503ea3248
 
-* Ruby version
+## Dependencies
+- Ruby 2.1.5
+- Rails 5.1.2
+- Json Web Token (JWT)
+- PostgreSQL
+- Bcrypt
 
-* System dependencies
+## Installation
+- Clone this project
 
-* Configuration
+        $ git clone https://github.com/riskimidiw/rails-jwt.gi
+        
+- Change directory to this project
 
-* Database creation
+        $ cd rails-jwt
 
-* Database initialization
+- Install dependencies
 
-* How to run the test suite
+        $ bundle install
 
-* Services (job queues, cache servers, search engines, etc.)
+- Create database
 
-* Deployment instructions
+        $ rake db:create
+        
+- Run migration
 
-* ...
+        $ rake db:migrate
+        
+- Run this project
+        
+        $ rails server 
