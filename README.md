@@ -11,6 +11,8 @@ https://medium.com/@riskimidiw/rails-api-jwt-authentication-a04503ea3248
 - Json Web Token (JWT)
 - PostgreSQL
 - Bcrypt
+- Cloudinary
+- Carrierwave
 
 ## Installation
 - Clone this project
