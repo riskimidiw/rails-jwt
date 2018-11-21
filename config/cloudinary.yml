@@ -1,0 +1,9 @@
+development:
+  cloud_name: "repository"
+  api_key: "213343669216552"
+  api_secret: "O1otrSPUc7x9EVFTlcXDVZzCTuQ"
+
+production:
+  cloud_name: "repository"
+  api_key: "213343669216552"
+  api_secret: "O1otrSPUc7x9EVFTlcXDVZzCTuQ"
