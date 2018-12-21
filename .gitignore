@@ -25,3 +25,6 @@
 # Ignore Intellij IDE file
 .idea
 .rails-jwt.iml
+
+# Ignore cloudinary.yml
+/config/cloudinary.yml
