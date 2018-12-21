@@ -1,9 +1,9 @@
 development:
-  cloud_name: "repository"
-  api_key: "213343669216552"
-  api_secret: "O1otrSPUc7x9EVFTlcXDVZzCTuQ"
+  cloud_name: "your_cloudinary_cloud_name"
+  api_key: "your_api_key"
+  api_secret: "your_api_sercret"
 
 production:
-  cloud_name: "repository"
-  api_key: "213343669216552"
-  api_secret: "O1otrSPUc7x9EVFTlcXDVZzCTuQ"
+  cloud_name: "your_cloudinary_cloud_name"
+  api_key: "your_api_key"
+  api_secret: "your_api_sercret"
