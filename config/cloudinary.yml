@@ -1,9 +1,5 @@
 development:
-  cloud_name: "your_cloudinary_cloud_name"
-  api_key: "your_api_key"
-  api_secret: "your_api_sercret"
+  CLOUDINARY_URL: ENV["CLOUDINARY_URL"]
 
 production:
-  cloud_name: "your_cloudinary_cloud_name"
-  api_key: "your_api_key"
-  api_secret: "your_api_sercret"
+  CLOUDINARY_URL: ENV["CLOUDINARY_URL"]
