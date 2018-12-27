@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   def update
     if @user.nil?
       render json: { errors: 'User not found' }, status: :not_found
-    elsif @user.update(user_params)
+    elsif !@user.update(user_params)
       render json: { errors: @user.errors.full_messages },
              status: :unprocessable_entity
     end
@@ -45,7 +45,7 @@ class UsersController < ApplicationController
   private
 
   def find_user
-    @user = User.find_by_username(params[:username])
+    @user = User.find_by_username(params[:_username])
   end
 
   def user_params
