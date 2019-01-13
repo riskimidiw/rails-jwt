@@ -17,7 +17,7 @@ https://medium.com/@riskimidiw/rails-api-jwt-authentication-a04503ea3248
 ## Installation
 - Clone this project
 
-        $ git clone https://github.com/riskimidiw/rails-jwt.gi
+        $ git clone https://github.com/riskimidiw/rails-jwt.git
         
 - Change directory to this project
 
