@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
   # GET /users/{username}
   def show
-    @user ? (render json: @user) : (render json: { errors: 'User not found' })
+    render json: @user, status: :ok
   end
 
   # POST /users
@@ -26,9 +26,7 @@ class UsersController < ApplicationController
 
   # PUT /users/{username}
   def update
-    if @user.nil?
-      render json: { errors: 'User not found' }, status: :not_found
-    elsif !@user.update(user_params)
+    unless @user.update(user_params)
       render json: { errors: @user.errors.full_messages },
              status: :unprocessable_entity
     end
@@ -36,19 +34,20 @@ class UsersController < ApplicationController
 
   # DELETE /users/{username}
   def destroy
-    unless @user&.destroy
-      render json: { errors: 'User not found' },
-             status: :not_found
-    end
+    @user.destroy
   end
 
   private
 
   def find_user
-    @user = User.find_by_username(params[:_username])
+    @user = User.find_by_username!(params[:_username])
+    rescue ActiveRecord::RecordNotFound
+      render json: { errors: 'User not found' }, status: :not_found
   end
 
   def user_params
-    params.permit(:avatar, :name, :username, :email, :password, :password_confirmation)
+    params.permit(
+      :avatar, :name, :username, :email, :password, :password_confirmation
+    )
   end
 end
